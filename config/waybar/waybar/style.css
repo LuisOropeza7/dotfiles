@@ -1,0 +1,117 @@
+@import "colors.css";
+
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-size: 16px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* El contenedor principal de los módulos */
+.modules-center {
+  background: @surface_container;
+  padding: 6px 12px;
+  border-radius: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+window#waybar {
+  background: transparent;
+}
+
+/* Ajuste de tooltips con colores de tu paleta */
+tooltip {
+  background: @surface_container_high;
+  border: 1px solid @outline;
+  border-radius: 12px;
+}
+
+tooltip label {
+  color: @on_surface;
+  padding: 6px;
+}
+
+#workspaces {
+  background: transparent;
+  padding: 0;
+  margin: 0 10px 0 10px;
+  border: none;
+  box-shadow: none;
+}
+
+#workspaces button {
+  padding: 0px 6px;
+  margin: 0px 2px;
+  border-radius: 16px;
+  color: @outline; /* Color sutil para inactivos */
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Degradado usando Primary, Tertiary y Secondary de Matugen */
+#workspaces button.active {
+  background: linear-gradient(135deg, @primary 0%, @tertiary 50%, @secondary 100%);
+  color: @surface_container_lowest; /* Contraste oscuro para el texto */
+  min-width: 46px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  background-color: @surface_bright;
+  color: @on_surface;
+}
+
+#workspaces button.urgent {
+  background-color: @error;
+  color: @on_error;
+}
+
+/* Estilo común para todos los módulos de la barra */
+#battery,
+#pulseaudio,
+#backlight,
+#custom-pacman,
+#network,
+#clock,
+#custom-weather,
+#custom-media,
+#window,
+#custom-launcher,
+#custom-notification,
+#submap,
+#power-profiles-daemon,
+#custom-home-folder {
+  background-color: @surface_container;
+  color: @on_surface;
+  padding: 0 8px;
+  margin: 0 5px;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Detalles específicos de color para iconos o texto */
+#submap {
+  color: @tertiary;
+}
+
+#custom-launcher {
+  color: @primary;
+}
+
+#clock {
+  color: @on_surface;
+  margin: 0;
+}
+
+#custom-media {
+  color: @secondary;
+  margin: 0 0 0 10px;
+}
+
+#custom-weather {
+  color: @on_surface_variant;
+}
