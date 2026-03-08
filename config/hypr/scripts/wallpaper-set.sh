@@ -2,6 +2,7 @@
 
 awww-daemon & disown
 
-WALLPAPER="$HOME/Pictures/Wallpapers/backiee-217832-landscape.jpg"
+WALLPAPER="$HOME/Pictures/Wallpapers/wallpaper_006.jpg"
 
 awww img "$WALLPAPER" --resize fit -t none
+matugen image "$WALLPAPER"
